@@ -70,6 +70,7 @@ The dataset consists of **5 CSV files** covering the period **May – July (Week
 | ratings_given | Customer rating |
 | no_guests | Number of guests |
 
+📁 Full column descriptions are available in meta_data_hospitality.txt
 ---
 
 ## 🧠 Key Business Metrics (Hospitality Jargon)
