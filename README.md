@@ -89,37 +89,35 @@ The dataset consists of **5 CSV files** covering the period **May – July (Week
 > ⚠️ **Industry Note:** In hospitality, **Weekdays = Sunday to Thursday** and **Weekends = Friday & Saturday**.
 ---
 
-# 🛠️ Tools & Techniques Used
+## 🛠️ Tools & Techniques Used
 
 ### Tools
 
-- Power BI Desktop
-- Power Query
-- DAX
-- Excel
+- **Power BI Desktop** — Dashboard design and visualisation
+- **Power Query (M Language)** — Data loading, transformation, and modelling
+- **DAX (Data Analysis Expressions)** — Calculated columns and measures
+- **Excel** — Metrics list and reference data
 
-### Skills Applied
+### Power BI Skills Applied
 
-- Star Schema Data Modelling
-- DAX Measures
-- Calculated Columns
-- KPI Cards
-- Conditional Formatting
-- Dynamic Titles
-- Bookmarks and Navigation
-- Week-on-Week Analysis
+- Data modelling (Star Schema)
+- Calculated columns using DAX
+- 26+ custom measures including RevPAR, ADR, Occupancy, Realisation %
+- Bookmarks and page navigation buttons
+- KPI indicators and conditional formatting
+- Dynamic titles based on applied filters
+- Week-on-Week change indicators
 
 ---
 
-# ⚙️ Data Transformation Steps
+## ⚙️ Data Transformation Steps
 
-### Power Query
+### Power Query Processing
 
-- Removed existing day_type column.
-- Recreated day_type according to industry standards.
-- Fixed headers in dim_rooms.
-- Imported all CSV files through Folder Connector.
-- Established relationships between tables.
+- Removed the pre-built `day_type` column from `dim_date` (industry definition differs — Fri/Sat = Weekend)
+- Recreated `day_type` as a DAX calculated column using `WEEKDAY()` logic
+- Applied **"Use First Row as Headers"** fix for `dim_rooms`
+- Loaded all 5 CSV files via a folder connector and expanded each as a separate table
 
 ### Key DAX Measures
 
@@ -130,33 +128,50 @@ Revenue =
 SUM(fact_bookings[revenue_realized])
 ```
 
+#### Total Bookings
+
+```DAX
+Total Bookings =
+COUNT(fact_bookings[booking_id])
+```
+
 #### Occupancy %
 
 ```DAX
 Occupancy % =
-DIVIDE([Total Rooms Occupied],[Total Rooms Available])
+DIVIDE([Total Rooms Occupied], [Total Rooms Available])
 ```
 
 #### ADR
 
 ```DAX
 ADR =
-DIVIDE([Revenue],[Rooms Sold])
+DIVIDE([Revenue], [Rooms Sold])
 ```
 
 #### RevPAR
 
 ```DAX
 RevPAR =
-DIVIDE([Revenue],[Total Rooms Available])
+DIVIDE([Revenue], [Total Rooms Available])
 ```
 
 #### Realisation %
 
 ```DAX
 Realisation % =
-DIVIDE([URN],[BRN])
+DIVIDE([URN], [BRN])
 ```
+
+#### day_type (Calculated Column)
+
+```DAX
+day_type =
+VAR wkd = WEEKDAY(dim_date[date])
+RETURN IF(wkd > 5, "Weekend", "Weekday")
+```
+
+📊 **All 26+ measures are documented in `metrics list.xlsx`.**
 
 ---
 
