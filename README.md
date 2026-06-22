@@ -230,45 +230,34 @@ RETURN IF(wkd > 5, "Weekend", "Weekday")
 ![Revenue Details](Images/revenue_insights.png)
 
 ---
+## 💡 Key Insights from the Dashboard
 
-# 💡 Key Insights
-
-- 📍 Mumbai generates the highest revenue.
-- 🏆 AtliQ Exotica is the top-performing property.
-- 🛏️ AtliQ Bay has the highest occupancy rate (66%).
-- 📅 Week 24 recorded peak revenue at ₹139.6M.
-- 🌆 Delhi leads in occupancy and ratings.
-- ❌ ₹298M revenue loss due to cancellations.
-- 🛎️ Elite room class has the highest bookings and cancellations.
-- 💰 Luxury hotels contribute ~61.62% of total revenue.
-- 📉 Weekends consistently outperform weekdays.
-- 📱 MakeYourTrip drives ~41% of bookings.
-- 🔄 Realisation % remains around 70%.
+- 📍 Mumbai generates the highest revenue among all cities, followed by Bangalore, Hyderabad, and Delhi.
+- 🏆 AtliQ Exotica is the top-performing property — ₹320M revenue, 3.62 avg rating, 57% occupancy, 24.4% cancellation rate.
+- 🛏️ AtliQ Bay holds the highest occupancy rate at 66%.
+- 📅 Week 24 recorded the peak revenue at ₹139.6 Million.
+- 🏙️ Delhi tops both occupancy and guest ratings across all cities.
+- ❌ AtliQ lost approximately ₹298 Million due to cancellations.
+- 🛎️ Elite room class has the highest bookings but also the highest cancellation rate.
+- 💰 Luxury segment contributes ~61.62% of total revenue; Business contributes 38.38%.
+- 🔄 Hotels use a fixed pricing strategy — no dynamic pricing between weekdays and weekends (a clear opportunity).
+- 📉 Weekends consistently show higher occupancy and RevPAR than weekdays across all 13 weeks.
+- 📱 MakeYourTrip drives the highest booking share (~41%) among all platforms.
+- 🔁 Realisation % stays consistently around 70% across both weekday and weekend segments.
 
 ---
 
-# 📈 Dashboard Analysis Approach
+## 📈 Dashboard Analysis Approach
 
-### Level 1 — Diagnostic Analysis
+The dashboard follows a two-level analysis framework:
 
-KPIs:
+### Level 1 — Diagnostic (High-Level KPIs)
 
-- Revenue
-- RevPAR
-- Occupancy %
-- ADR
-- DSRN
-- Realisation %
+Cards showing **Revenue, RevPAR, Occupancy %, ADR, DSRN, and Realisation %** — these tell you if there is a problem without needing to drill down.
 
-### Level 2 — Deep Dive Analysis
+### Level 2 — Deep Dive
 
-Breakdown by:
-
-- City
-- Property
-- Platform
-- Room Class
-
+City-level, property-level, platform-level, and room-class breakdowns that tell you where exactly the problem is — so stakeholders can take targeted action.
 ---
 
 # 📁 Repository Structure
