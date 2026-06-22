@@ -46,17 +46,17 @@ Build a comprehensive Revenue Intelligence Dashboard that empowers stakeholders 
 
 ---
 
-# 🗂️ Dataset Information
+## 🗂️ Dataset Information
 
-The dataset consists of 5 CSV files covering May – July (Weeks 19–31).
+The dataset consists of **5 CSV files** covering the period **May – July (Weeks 19 to 31)**.
 
 | File | Description |
 |--------|------------|
-| dim_date.csv | Date information |
-| dim_hotels.csv | Hotel details and category |
-| dim_rooms.csv | Room type information |
-| fact_aggregated_bookings.csv | Successful bookings and room capacity |
-| fact_bookings.csv | Individual booking records |
+| **dim_date.csv** | Dates with week number, month, and day type (Weekday/Weekend) |
+| **dim_hotels.csv** | Hotel property details — name, city, and category (Luxury/Business) |
+| **dim_rooms.csv** | Room types mapped to class (Standard, Elite, Premium, Presidential) |
+| **fact_aggregated_bookings.csv** | Successful bookings and room capacity per property, date, and room type |
+| **fact_bookings.csv** | Individual booking records with revenue, status, platform, and ratings |
 
 ### Column Highlights (fact_bookings)
 
@@ -72,23 +72,19 @@ The dataset consists of 5 CSV files covering May – July (Weeks 19–31).
 
 ---
 
-# 🧠 Key Business Metrics
+## 🧠 Key Business Metrics (Hospitality Jargon)
 
-| Metric | Formula |
-|----------|---------|
-| RevPAR | Revenue ÷ Total Rooms Available |
-| ADR | Revenue ÷ Rooms Sold |
-| Occupancy % | Rooms Occupied ÷ Rooms Available |
-| DSRN | Daily Sellable Room Nights |
-| Realisation % | URN ÷ BRN |
-| URN | Utilized Room Nights |
-| BRN | Booked Room Nights |
+| Metric | Formula | What It Tells You |
+|----------|---------|-------------------|
+| **RevPAR** | Total Revenue ÷ Total Rooms Available or ADR × Occupancy% | Revenue efficiency per available room |
+| **ADR** | Total Room Revenue ÷ Rooms Sold | Average price at which rooms were sold |
+| **Occupancy %** | Rooms Occupied ÷ Rooms Available × 100 | How well room capacity is being utilised |
+| **DSRN** | Daily Sellable Room Nights | Available rooms each day (highlights blocking/maintenance issues) |
+| **Realisation %** | URN ÷ BRN | Ratio of customers who actually stayed vs. those who booked |
+| **URN** | Utilized Room Nights | Rooms where the customer actually checked in and stayed |
+| **BRN** | Booked Room Nights | Total rooms booked (includes cancellations and no-shows) |
 
-> ⚠️ Hospitality Industry Definition:
->
-> Weekdays = Sunday–Thursday  
-> Weekends = Friday–Saturday
-
+> ⚠️ **Industry Note:** In hospitality, **Weekdays = Sunday to Thursday** and **Weekends = Friday & Saturday**.
 ---
 
 # 🛠️ Tools & Techniques Used
