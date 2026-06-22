@@ -58,7 +58,7 @@ The dataset consists of **5 CSV files** covering the period **May – July (Week
 | **fact_aggregated_bookings.csv** | Successful bookings and room capacity per property, date, and room type |
 | **fact_bookings.csv** | Individual booking records with revenue, status, platform, and ratings |
 
-### Column Highlights (fact_bookings)
+## Column Highlights (fact_bookings)
 
 | Column | Description |
 |----------|------------|
