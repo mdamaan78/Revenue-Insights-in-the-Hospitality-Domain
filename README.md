@@ -258,6 +258,7 @@ Cards showing **Revenue, RevPAR, Occupancy %, ADR, DSRN, and Realisation %** —
 ### Level 2 — Deep Dive
 
 City-level, property-level, platform-level, and room-class breakdowns that tell you where exactly the problem is — so stakeholders can take targeted action.
+
 ---
 
 # 📁 Repository Structure
